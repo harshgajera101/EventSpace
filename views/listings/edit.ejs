@@ -11,11 +11,11 @@
       enctype="multipart/form-data"
     >
       <div class="mb-3">
-        <label for="title" class="form-label">Title</label>
+        <label for="venueName" class="form-label">Title</label>
         <input
-          name="listing[title]"
+          name="listing[venueName]"
           type="text"
-          value="<%= listing.title %>"
+          value="<%= listing.venueName %>"
           class="form-control"
           required
         />
@@ -24,14 +24,14 @@
       </div>
 
       <div class="mb-3">
-        <label for="description" class="form-label">Description</label>
+        <label for="venueDescription" class="form-label">Description</label>
         <textarea
-          name="listing[description]"
+          name="listing[venueDescription]"
           type="text"
           class="form-control"
           required
         >
-<%= listing.description %></textarea
+<%= listing.venueDescription %></textarea
         >
         <div class="valid-feedback">Description Looks good!</div>
         <div class="invalid-feedback">Please enter a short description</div>
@@ -50,9 +50,9 @@
       <div class="mb-3">
         <label for="price" class="form-label">Price</label>
         <input
-          name="listing[price]"
+          name="listing[eventRate]"
           type="number"
-          value="<%= listing.price %>"
+          value="<%= listing.eventRate %>"
           class="form-control"
           required
         />

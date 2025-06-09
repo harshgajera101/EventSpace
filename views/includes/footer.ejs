@@ -1,14 +1,156 @@
-<footer>
+<!-- <footer>
   <div class="f-info">
     <div class="f-info-socials">
       <i class="fa-brands fa-square-facebook"></i>
       <i class="fa-brands fa-square-instagram"></i>
       <i class="fa-brands fa-linkedin"></i>
     </div>
-    <div class="f-info-brand">&copy; Wanderlust Private Limited</div>
+    <div class="f-info-brand">&copy; EventSpaces Private Limited</div>
     <div class="f-info-links">
       <a href="/privacy">Privacy</a>
       <a href="/terms">Terms</a>
     </div>
+  </div>
+</footer> -->
+
+<style>
+  footer {
+    background-color: #1e1e2f;
+    color: #f0f0f0;
+    padding: 30px 15px 15px;
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    color: #b5cfed;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+  }
+
+  .footer-section p,
+  .footer-section ul,
+  .footer-section a {
+    color: #ccc;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 0.4rem;
+  }
+
+  .footer-section a {
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-section a:hover {
+    color: #7fabdc;
+  }
+
+  .f-info-socials a {
+    margin-right: 8px;
+    color: #ccc;
+    font-size: 1.3rem;
+    transition: transform 0.3s, color 0.3s;
+  }
+
+  .f-info-socials a:hover {
+    transform: scale(1.15);
+    color: #7fabdc;
+  }
+
+  .footer-section input[type="email"] {
+    padding: 8px;
+    width: 85%;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+  }
+
+  .footer-section button {
+    padding: 8px 16px;
+    background-color: #b5cfed;
+    color: #1e1e2f;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.3s;
+  }
+
+  .footer-section button:hover {
+    background-color: #7fabdc;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+    font-size: 0.8rem;
+    color: #aaa;
+  }
+</style>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-section brand">
+      <h2>EventSpaces</h2>
+      <p>
+        Crafting unforgettable moments with stunning event venues across India.
+      </p>
+      <div class="f-info-socials">
+        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Venues</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Privacy Policy</a></li>
+        <li><a href="">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h3>Contact</h3>
+      <p><i class="fa-solid fa-envelope"></i> support@eventspaces.com</p>
+      <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+      <p><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra, India</p>
+    </div>
+
+    <div class="footer-section newsletter">
+      <h3>Subscribe</h3>
+      <p>Get latest venue updates & offers</p>
+      <form>
+        <input type="email" placeholder="Enter your email" />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 EventSpaces Private Limited. All rights reserved.
   </div>
 </footer>

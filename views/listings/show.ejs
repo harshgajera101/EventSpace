@@ -7,7 +7,7 @@
 
 <div class="row mt-3">
   <div class="col-8 offset-3">
-    <h3><%= listing.title %></h3>
+    <h3><%= listing.venueName %></h3>
   </div>
 
   <div class="card col-6 offset-3 show-card listing-card">
@@ -19,8 +19,8 @@
     <div class="card-body mt-2">
       <p class="card-text">Owned by: <i> <%= listing.owner.username %></i></p>
       <p class="card-text">
-        <b> <%= listing.description %> </b><br />
-        <b>₹ <%= listing.price.toLocaleString("en-IN") %></b><br />
+        <b> <%= listing.venueDescription %> </b><br />
+        <b>₹ <%= listing.eventRate.toLocaleString("en-IN") %></b><br />
         <b> <%= listing.location %> </b><br />
         <b> <%= listing.country %> </b><br />
       </p>

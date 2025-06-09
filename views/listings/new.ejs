@@ -1,6 +1,6 @@
 <% layout("/layouts/boilerplate") %>
 <body>
-  <div class="row mt-3">
+  <div class="row mt-3 mb-5">
     <div class="col-8 offset-2">
       <br />
       <h3>Create a New Listing</h3>
@@ -12,10 +12,10 @@
         enctype="multipart/form-data"
       >
         <div class="mb-3">
-          <label for="title" class="form-label">Title</label>
+          <label for="venueName" class="form-label">Title</label>
           <input
             class="form-control"
-            name="listing[title]"
+            name="listing[venueName]"
             type="text"
             placeholder="Add a title"
             required
@@ -25,16 +25,56 @@
         </div>
 
         <div class="mb-3">
-          <label for="description" class="form-label">Description</label>
+          <label for="venueDescription" class="form-label">Description</label>
           <textarea
             class="form-control"
-            name="listing[description]"
+            name="listing[venueDescription]"
             type="text"
             placeholder="Enter description"
             required
           ></textarea>
           <div class="valid-feedback">Description Looks good!</div>
           <div class="invalid-feedback">Please enter a short description</div>
+        </div>
+
+        <div class="row">
+          <div class="mb-3 col-md-8">
+            <label for="eventRate" class="form-label">Price</label>
+            <input
+              class="form-control"
+              name="listing[eventRate]"
+              placeholder="1200"
+              required
+            />
+            <div class="valid-feedback">Price Looks good!</div>
+            <div class="invalid-feedback">Please enter a valid price</div>
+          </div>
+
+          <!-- <div class="dropdown mb-3 col-md-4">
+            <label for="category" class="form-label">Categories</label>
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              required
+            >
+              Dropdown button
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <p class="dropdown-item">Trending</p>
+              <p class="dropdown-item">Beaches</p>
+              <p class="dropdown-item">Mountains</p>
+              <p class="dropdown-item">Swimmingpools</p>
+              <p class="dropdown-item">IconicCity</p>
+              <p class="dropdown-item">Rooms</p>
+              <p class="dropdown-item">Frams</p>
+              <p class="dropdown-item">Surfing</p>
+              <p class="dropdown-item">Camping</p>
+            </div>
+          </div> -->
         </div>
 
         <div class="mb-3">
@@ -45,18 +85,6 @@
             name="listing[image]"
             required
           />
-        </div>
-
-        <div class="mb-3">
-          <label for="price" class="form-label">Price</label>
-          <input
-            class="form-control"
-            name="listing[price]"
-            placeholder="1200"
-            required
-          />
-          <div class="valid-feedback">Price Looks good!</div>
-          <div class="invalid-feedback">Please enter a valid price</div>
         </div>
 
         <div class="row">

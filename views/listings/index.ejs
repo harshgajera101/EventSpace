@@ -127,10 +127,10 @@
         <div class="card-img-overlay"></div>
         <div class="card-body">
           <p class="card-text">
-            <b><%= listing.title%></b> <br />
-            ₹ <%= listing.price.toLocaleString("en-IN") %> / night
+            <b><%= listing.venueName%></b> <br />
+            ₹ <%= listing.eventRate.toLocaleString("en-IN") %> / per Hour
             <i class="tax-info"
-              >&nbsp;+ 18% GST = ₹<%= (listing.price + listing.price *
+              >&nbsp;+ 18% GST = ₹<%= (listing.eventRate + listing.eventRate *
               0.18).toLocaleString("en-IN") %></i
             >
           </p>

@@ -1,18 +1,19 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const Review = require("./review.js");
+const { string } = require("joi");
 
 const listingSchema = new Schema({
-  title: {
+  venueName: {
     type: String,
     required: true,
   },
-  description: String,
+  venueDescription: String,
   image: {
     url: String,
     filename: String,
   },
-  price: Number,
+  eventRate: Number,
   location: String,
   country: String,
   reviews: [
@@ -36,6 +37,25 @@ const listingSchema = new Schema({
       required: true,
     },
   },
+  // category: {
+  //   type: string,
+  //   enum: [
+  //     "Trending",
+  //     "Beaches",
+  //     "Mountains",
+  //     "Swimmingpools",
+  //     "IconicCity",
+  //     "Rooms",
+  //     "Frams",
+  //     "Surfing",
+  //     "Camping",
+  //   ],
+  //   required: true,
+  // },
+  // capacity: {
+  //   type: Number,
+  //   required: true,
+  // },
 });
 
 listingSchema.post("findOneAndDelete", async (listing) => {
