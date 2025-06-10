@@ -4,6 +4,7 @@ module.exports.listingSchema = Joi.object({
   listing: Joi.object({
     venueName: Joi.string().required(),
     eventRate: Joi.number().required().min(0),
+    capacity: Joi.number().required().min(0),
     venueDescription: Joi.string().required(),
     location: Joi.string().required(),
     country: Joi.string().required(),

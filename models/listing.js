@@ -14,6 +14,7 @@ const listingSchema = new Schema({
     filename: String,
   },
   eventRate: Number,
+  capacity: Number,
   location: String,
   country: String,
   reviews: [

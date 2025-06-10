@@ -38,7 +38,7 @@
         </div>
 
         <div class="row">
-          <div class="mb-3 col-md-8">
+          <div class="mb-3 col-md-6">
             <label for="eventRate" class="form-label">Price</label>
             <input
               class="form-control"
@@ -48,6 +48,18 @@
             />
             <div class="valid-feedback">Price Looks good!</div>
             <div class="invalid-feedback">Please enter a valid price</div>
+          </div>
+
+          <div class="mb-3 col-md-6">
+            <label for="capacity" class="form-label">Capacity</label>
+            <input
+              class="form-control"
+              name="listing[capacity]"
+              placeholder="300"
+              required
+            />
+            <div class="valid-feedback">Capacities Looks good!</div>
+            <div class="invalid-feedback">Please enter a valid Capacities</div>
           </div>
 
           <!-- <div class="dropdown mb-3 col-md-4">

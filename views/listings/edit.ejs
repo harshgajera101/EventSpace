@@ -47,17 +47,31 @@
         <input type="file" name="listing[image]" class="form-control" />
       </div>
 
-      <div class="mb-3">
-        <label for="price" class="form-label">Price</label>
-        <input
-          name="listing[eventRate]"
-          type="number"
-          value="<%= listing.eventRate %>"
-          class="form-control"
-          required
-        />
-        <div class="valid-feedback">Price Looks good!</div>
-        <div class="invalid-feedback">Please enter a valid price</div>
+      <div class="row">
+        <div class="mb-3 col-md-6">
+          <label for="price" class="form-label">Price</label>
+          <input
+            name="listing[eventRate]"
+            type="number"
+            value="<%= listing.eventRate %>"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">Price Looks good!</div>
+          <div class="invalid-feedback">Please enter a valid price</div>
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="capacity" class="form-label">Capacity</label>
+          <input
+            name="listing[capacity]"
+            type="number"
+            value="<%= listing.capacity %>"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">Capacities Looks good!</div>
+          <div class="invalid-feedback">Please enter a valid Capacities</div>
+        </div>
       </div>
 
       <div class="row">

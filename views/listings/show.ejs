@@ -19,10 +19,12 @@
     <div class="card-body mt-2">
       <p class="card-text">Owned by: <i> <%= listing.owner.username %></i></p>
       <p class="card-text">
-        <b> <%= listing.venueDescription %> </b><br />
-        <b>₹ <%= listing.eventRate.toLocaleString("en-IN") %></b><br />
-        <b> <%= listing.location %> </b><br />
-        <b> <%= listing.country %> </b><br />
+        <b>Venue Description: <%= listing.venueDescription %> </b><br />
+        <b>Rate per Hour: ₹ <%= listing.eventRate.toLocaleString("en-IN") %></b
+        ><br />
+        <b>Capacity: <%= listing.capacity %></b><br />
+        <b>Location: <%= listing.location %> </b><br />
+        <b>Country: <%= listing.country %> </b><br />
       </p>
     </div>
   </div>
