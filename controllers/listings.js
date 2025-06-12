@@ -23,7 +23,12 @@ module.exports.search = async (req, res) => {
   const { q } = req.query;
   const regex = new RegExp(q, "i");
   const results = await Listing.find({
-    $or: [{ venueName: regex }, { location: regex }, { country: regex }],
+    $or: [
+      { venueName: regex },
+      { venueType: regex },
+      { location: regex },
+      { country: regex },
+    ],
   });
   res.json(results);
 };
