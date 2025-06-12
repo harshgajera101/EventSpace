@@ -1,42 +1,49 @@
-# 🎉 EventSpace — Discover Perfect Venues for Your Events
+# 🎪 EventSpace — Discover Perfect Venues for Your Events
 
-A full-stack web application inspired by **Airbnb**, where users can **discover, list, and review** event venues like conference halls, banquet halls, wedding venues, corporate spaces, and more from around the globe. Built using the **MERN stack principles** with cloud integrations and responsive design for a seamless user experience.
+A comprehensive full-stack web application for event venue booking, connecting venue owners with event planners to discover and book perfect spaces for weddings, conferences, parties, and corporate events.. Built using the **MERN stack principles** with cloud integrations and responsive design for a seamless user experience.
 
 ---
 
 ## ✨ Features
 
-### 🔍 Discover & Explore
+### 🗺️ Core Functionality
 
-* Browse curated venue listings with details like pricing, location, capacity, and photos
-* View venues on interactive **Mapbox** maps
-* **Real-time search functionality** using **AJAX** for instant results
-* Filter venues by **venue type** on the home page through interactive icons
-* Search for venues based on user preferences and requirements
+* **Browse Venues**: Explore diverse event spaces including wedding halls, conference centers, gardens, and banquet halls
+* **Venue Details**: Comprehensive venue pages with capacity, amenities, pricing, location, and high-quality images
+* **Interactive Maps**: Integrated **Mapbox** maps showing exact venue locations and nearby landmarks
+* **Event Reviews**: Read authentic reviews from event organizers and share your venue experiences
+
+### 👥 User Management
+
+* **Secure Authentication**: Robust user registration and login system for venue owners and event planners
+* **Session Management**: Stay logged in for 14 days with automatic logout for inactive sessions
+* **Role-Based Access**: Protected actions ensuring only venue owners can manage their listings
 
 ### 🏢 Venue Management
 
-* Authenticated users can **create, edit, and delete** venue listings
-* Upload venue images via **Cloudinary**
-* Secure ownership-based controls
+* **List Your Venue**: Venue owners can create detailed listings with photos, amenities, and availability
+* **Manage Listings**: Full control to edit pricing, update descriptions, and manage venue availability
+* **Image Gallery**: Professional image upload and management via **Cloudinary** integration
 
-### ✍️ Review System
+### 🌟 Review & Rating System
 
-* Leave reviews and ratings for venues
-* Edit or delete your own reviews
-* View aggregated feedback from other event organizers
+* **Event Experiences**: Share detailed reviews about venue quality, service, and event success
+* **Review Management**: Edit or delete your own reviews with proper user permissions
+* **Rating System**: Help other event planners make informed venue decisions
 
-### 🔐 Authentication & Access
+### 📱 User Experience
 
-* User **registration & login** via Passport.js
-* Session management with secure cookies
-* Role-based **authorization for protected actions**
+* **Responsive Design**: Seamless experience across desktop, tablet, and mobile devices
+* **Smart Search**: Find venues by location, capacity, type, and price range
+* **Real-Time Feedback**: Instant flash messages for all user actions and confirmations
+* **Secure Operations**: Protected routes and data validation for safe user interactions
 
 ### 🎯 Venue Filtering
 
 * **Interactive venue type icons** on home page
 * Click on venue type icons to view specific categories
 * Seamless filtering experience for better venue discovery
+
 
 ---
 
@@ -70,7 +77,7 @@ A full-stack web application inspired by **Airbnb**, where users can **discover,
 
 ## 🚀 Live Demo
 
-🔗 [Check Out the Live App](https://eventspace-demo.onrender.com/venues)
+🔗 [Check Out the Live App](https://eventspace-bs0r.onrender.com/listings)
 
 ---
 
@@ -157,8 +164,6 @@ eventspace/
 * 📧 **Email Notifications** for bookings and confirmations
 * 🛠️ **Admin Dashboard** for venue management
 * 📱 **PWA / Mobile App** for on-the-go access
-* 🌐 **Multi-Language Support**
-* 📊 **Analytics Dashboard** for venue owners
 
 ---
 
@@ -176,7 +181,6 @@ eventspace/
 
 * 🐢 **Image uploads** may be slow on the free **Cloudinary** tier
 * 🌐 **Maps** may not load properly on unstable internet connections
-* 🔍 **Search functionality** may experience slight delays during peak traffic
 
 ---
 
@@ -192,12 +196,18 @@ eventspace/
 
 ## 👨‍💻 Author
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Name](https://linkedin.com/in/your-profile)
+**Harsh Gajera**
+- GitHub: [@harshgajera101](https://github.com/harshgajera101)
+- LinkedIn: [Harsh Gajera](https://linkedin.com/in/gajera-harsh)
 
 ---
 
 ## 📝 License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+**Make Every Event Memorable! 🎉**
+
+*EventSpace - Where perfect venues meet perfect events.*
