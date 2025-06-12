@@ -44,9 +44,29 @@
         <img src="<%= originalImageUrl %>" alt="" />
       </div>
 
-      <div class="mb-3">
-        <label for="image" class="form-label">Upload New Image</label>
-        <input type="file" name="listing[image]" class="form-control" />
+      <div class="row">
+        <div class="mb-3 col-md-6">
+          <label for="image" class="form-label">Upload New Image</label>
+          <input type="file" name="listing[image]" class="form-control" />
+        </div>
+        <div class="dropdown mb-3 col-md-6">
+          <label for="venueType" class="form-label">Venue Type</label>
+          <select
+            class="form-select"
+            id="venueType"
+            name="listing[venueType]"
+            required
+          >
+            <option value="" disabled <%= !listing.venueType ? "selected" : "" %>>Select a venue type</option>
+            <option value="Banquet Halls" <%= listing.venueType === "Banquet Halls" ? "selected" : "" %>>Banquet Halls</option>
+            <option value="Open Lawns / Gardens" <%= listing.venueType === "Open Lawns / Gardens" ? "selected" : "" %>>Open Lawns / Gardens</option>
+            <option value="Rooftop Venues" <%= listing.venueType === "Rooftop Venues" ? "selected" : "" %>>Rooftop Venues</option>
+            <option value="Hotels & Resorts" <%= listing.venueType === "Hotels & Resorts" ? "selected" : "" %>>Hotels & Resorts</option>
+            <option value="Auditoriums" <%= listing.venueType === "Auditoriums" ? "selected" : "" %>>Auditoriums</option>
+            <option value="Beachside Venues" <%= listing.venueType === "Beachside Venues" ? "selected" : "" %>>Beachside Venues</option>
+            <option value="Heritage Properties" <%= listing.venueType === "Heritage Properties" ? "selected" : "" %>>Heritage Properties</option>
+          </select>
+        </div>
       </div>
 
       <div class="row">
