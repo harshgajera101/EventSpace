@@ -104,7 +104,7 @@ Ensure you have the following:
 2. **Install Dependencies**
 
    ```bash
-   npm install
+   npm install   #or npm install --legacy-peer-deps (if error occur)
    ```
 
 3. **Configure Environment**
