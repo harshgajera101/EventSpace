@@ -3,7 +3,7 @@
   <div class="row mt-3 mb-5">
     <div class="col-8 offset-2">
       <br />
-      <h3>Create a New Listing</h3>
+      <h3>Create a New Venue Listing</h3>
       <form
         method="POST"
         action="/listings"
@@ -12,20 +12,22 @@
         enctype="multipart/form-data"
       >
         <div class="mb-3">
-          <label for="venueName" class="form-label">Title</label>
+          <label for="venueName" class="form-label">Venue Name</label>
           <input
             class="form-control"
             name="listing[venueName]"
             type="text"
-            placeholder="Add a title"
+            placeholder="Add a venue name"
             required
           />
-          <div class="valid-feedback">Title Looks good!</div>
-          <div class="invalid-feedback">Please enter a title</div>
+          <div class="valid-feedback">Venue Name Looks good!</div>
+          <div class="invalid-feedback">Please enter a Venue Name</div>
         </div>
 
         <div class="mb-3">
-          <label for="venueDescription" class="form-label">Description</label>
+          <label for="venueDescription" class="form-label"
+            >Venue Description</label
+          >
           <textarea
             class="form-control"
             name="listing[venueDescription]"
@@ -33,13 +35,15 @@
             placeholder="Enter description"
             required
           ></textarea>
-          <div class="valid-feedback">Description Looks good!</div>
-          <div class="invalid-feedback">Please enter a short description</div>
+          <div class="valid-feedback">Venue Description Looks good!</div>
+          <div class="invalid-feedback">
+            Please enter a short Venue Description
+          </div>
         </div>
 
         <div class="row">
           <div class="mb-3 col-md-6">
-            <label for="eventRate" class="form-label">Price</label>
+            <label for="eventRate" class="form-label">Price (per hour)</label>
             <input
               class="form-control"
               name="listing[eventRate]"
@@ -61,10 +65,12 @@
             <div class="valid-feedback">Capacities Looks good!</div>
             <div class="invalid-feedback">Please enter a valid Capacities</div>
           </div>
+        </div>
 
-          <!-- <div class="dropdown mb-3 col-md-4">
-            <label for="category" class="form-label">Categories</label>
-            <button
+        <div class="row">
+          <div class="dropdown mb-3 col-md-6">
+            <label for="venueType" class="form-label">Venue Type</label>
+            <!-- <button
               class="btn btn-secondary dropdown-toggle"
               type="button"
               id="dropdownMenuButton"
@@ -87,16 +93,32 @@
               <p class="dropdown-item">Camping</p>
             </div>
           </div> -->
-        </div>
+            <select
+              class="form-select"
+              id="venueType"
+              name="listing[venueType]"
+              required
+            >
+              <option value="" disabled selected>Select a venue type</option>
+              <option value="Banquet Halls">Banquet Halls</option>
+              <option value="Open Lawns / Gardens">Open Lawns / Gardens</option>
+              <option value="Rooftop Venues">Rooftop Venues</option>
+              <option value="Hotels & Resorts">Hotels & Resorts</option>
+              <option value="Auditoriums">Auditoriums</option>
+              <option value="Beachside Venues">Beachside Venues</option>
+              <option value="Heritage Properties">Heritage Properties</option>
+            </select>
+          </div>
 
-        <div class="mb-3">
-          <label for="image" class="form-label">Upload Image</label>
-          <input
-            class="form-control"
-            type="file"
-            name="listing[image]"
-            required
-          />
+          <div class="mb-3 col-md-6">
+            <label for="image" class="form-label">Upload Image</label>
+            <input
+              class="form-control"
+              type="file"
+              name="listing[image]"
+              required
+            />
+          </div>
         </div>
 
         <div class="row">

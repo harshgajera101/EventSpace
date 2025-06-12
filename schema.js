@@ -9,6 +9,17 @@ module.exports.listingSchema = Joi.object({
     location: Joi.string().required(),
     country: Joi.string().required(),
     // image: Joi.string().allow("", null),
+    venueType: Joi.string()
+      .valid(
+        "Banquet Halls",
+        "Open Lawns / Gardens",
+        "Rooftop Venues",
+        "Hotels & Resorts",
+        "Auditoriums",
+        "Beachside Venues",
+        "Heritage Properties"
+      )
+      .required(),
   }).required(),
 });
 

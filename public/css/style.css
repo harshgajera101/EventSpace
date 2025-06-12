@@ -98,14 +98,37 @@ body {
 }
 
 .add-btn {
-  background-color: #fe424d !important;
+  background-color: #1e1e2f !important;
   border: none !important;
+}
+
+.add-btn:hover {
+  background-color: rgba(25, 25, 40, 0.881) !important;
 }
 
 /* edit page */
 .edit-btn {
-  background-color: #fe424d !important;
+  /* color: #1e1e2f !important; */
+  font-weight: 600 !important;
+  background-color: #7fabdc !important;
   border: none !important;
+}
+.edit-btn:hover {
+  background-color: #6d98c9 !important;
+}
+
+.home-btn {
+  color: #f0f0f0 !important;
+  /* font-weight: 600 !important; */
+  background-color: #1e1e2f !important;
+}
+
+.home-btn:hover {
+  background-color: rgba(25, 25, 40, 0.881) !important;
+}
+
+.submit-btn:hover {
+  background-color: #1e1e2f !important;
 }
 
 /* show page */

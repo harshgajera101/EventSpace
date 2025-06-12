@@ -11,7 +11,7 @@
       enctype="multipart/form-data"
     >
       <div class="mb-3">
-        <label for="venueName" class="form-label">Title</label>
+        <label for="venueName" class="form-label">Venue Name</label>
         <input
           name="listing[venueName]"
           type="text"
@@ -19,12 +19,14 @@
           class="form-control"
           required
         />
-        <div class="valid-feedback">Title Looks good!</div>
-        <div class="invalid-feedback">Please enter a title</div>
+        <div class="valid-feedback">Venue Name Looks good!</div>
+        <div class="invalid-feedback">Please enter a Venue Name</div>
       </div>
 
       <div class="mb-3">
-        <label for="venueDescription" class="form-label">Description</label>
+        <label for="venueDescription" class="form-label"
+          >Venue Description</label
+        >
         <textarea
           name="listing[venueDescription]"
           type="text"
@@ -49,7 +51,7 @@
 
       <div class="row">
         <div class="mb-3 col-md-6">
-          <label for="price" class="form-label">Price</label>
+          <label for="price" class="form-label">Price(per hour)</label>
           <input
             name="listing[eventRate]"
             type="number"

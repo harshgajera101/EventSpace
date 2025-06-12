@@ -1,4 +1,15 @@
 <style>
+  .img-container {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .img-container img {
+    height: 100%;
+    width: auto;
+  }
+
   #search {
     width: 25vw;
   }
@@ -30,9 +41,12 @@
 
 <nav class="navbar navbar-expand-md border-bottom bg-body-light sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/listings"
+    <!-- <a class="navbar-brand" href="/listings"
       ><i class="fa-regular fa-compass"></i
-    ></a>
+    ></a> -->
+    <div class="img-container">
+      <img src="/image/logo1.png" alt="EventSpace Logo" />
+    </div>
     <button
       class="navbar-toggler"
       type="button"
@@ -47,16 +61,24 @@
       </div>
 
       <div class="navbar-nav ms-auto">
-        <form id="search" class="d-flex" role="search">
-          <input
-            class="form-control me-2 search-inp"
-            type="search"
-            placeholder="Search Destinations"
-          />
-          <button class="btn search-btn" type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>Search
-          </button>
-        </form>
+        <!-- <form
+          id="search"
+          class="d-flex"
+          role="search"
+          method="GET"
+          action="/listings/search"
+        > -->
+        <input
+          id="search"
+          class="form-control me-2 search-inp"
+          type="search"
+          name="q"
+          placeholder="Search Name, Location, or Category"
+        />
+        <!-- <button class="btn search-btn" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>Search
+        </button> -->
+        <!-- </form> -->
       </div>
 
       <div class="navbar-nav ms-auto">

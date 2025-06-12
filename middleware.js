@@ -32,7 +32,7 @@ module.exports.isOwner = async (req, res, next) => {
 module.exports.validateListing = (req, res, next) => {
   let { error } = listingSchema.validate(req.body);
   if (error) {
-    const errMsg = result.error.details.map((el) => el.message).join(",");
+    const errMsg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(400, errMsg);
   } else {
     next();
@@ -42,7 +42,7 @@ module.exports.validateListing = (req, res, next) => {
 module.exports.validateReview = (req, res, next) => {
   let { error } = reviewSchema.validate(req.body);
   if (error) {
-    const errMsg = result.error.details.map((el) => el.message).join(",");
+    const errMsg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(400, errMsg);
   } else {
     next();

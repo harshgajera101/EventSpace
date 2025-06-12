@@ -8,6 +8,26 @@ module.exports.index = async (req, res) => {
   res.render("listings/index.ejs", { allListings });
 };
 
+module.exports.search = async (req, res) => {
+  // const { q } = req.query;
+  // let allListings;
+  // if (q) {
+  //   const regex = new RegExp(q, "i"); // case-insensitive
+  //   allListings = await Listing.find({
+  //     $or: [{ venueName: regex }, { location: regex }, { country: regex }],
+  //   });
+  // } else {
+  //   allListings = await Listing.find({});
+  // }
+  // res.render("listings/index.ejs", { allListings });
+  const { q } = req.query;
+  const regex = new RegExp(q, "i");
+  const results = await Listing.find({
+    $or: [{ venueName: regex }, { location: regex }, { country: regex }],
+  });
+  res.json(results);
+};
+
 module.exports.renderNewForm = (req, res) => {
   res.render("listings/new.ejs");
 };

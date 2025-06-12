@@ -38,25 +38,21 @@ const listingSchema = new Schema({
       required: true,
     },
   },
-  // category: {
-  //   type: string,
-  //   enum: [
-  //     "Trending",
-  //     "Beaches",
-  //     "Mountains",
-  //     "Swimmingpools",
-  //     "IconicCity",
-  //     "Rooms",
-  //     "Frams",
-  //     "Surfing",
-  //     "Camping",
-  //   ],
-  //   required: true,
-  // },
-  // capacity: {
-  //   type: Number,
-  //   required: true,
-  // },
+  venueType: {
+    type: String,
+    enum: [
+      "Banquet Halls",
+      "Open Lawns / Gardens",
+      "Rooftop Venues",
+      "Hotels & Resorts",
+      "Auditoriums",
+      "Beachside Venues",
+      "Heritage Properties",
+    ],
+  },
+  capacity: {
+    type: Number,
+  },
 });
 
 listingSchema.post("findOneAndDelete", async (listing) => {

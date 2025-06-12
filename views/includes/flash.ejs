@@ -26,3 +26,14 @@
   ></button>
 </div>
 <% } %>
+
+<script>
+  setTimeout(() => {
+    document.querySelectorAll(".alert").forEach((alert) => {
+      alert.classList.remove("show");
+      alert.classList.add("fade");
+      alert.style.opacity = "0";
+      setTimeout(() => alert.remove(), 500);
+    });
+  }, 1500);
+</script>

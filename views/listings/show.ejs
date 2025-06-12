@@ -17,14 +17,34 @@
       alt="listing-image"
     />
     <div class="card-body mt-2">
-      <p class="card-text">Owned by: <i> <%= listing.owner.username %></i></p>
       <p class="card-text">
-        <b>Venue Description: <%= listing.venueDescription %> </b><br />
-        <b>Rate per Hour: ₹ <%= listing.eventRate.toLocaleString("en-IN") %></b
-        ><br />
-        <b>Capacity: <%= listing.capacity %></b><br />
-        <b>Location: <%= listing.location %> </b><br />
-        <b>Country: <%= listing.country %> </b><br />
+        Created by:&nbsp;<i> <%= listing.owner.username %></i>
+      </p>
+      <p class="card-text">
+        <div class="venueDetail">
+          <h5><b>Venue Description</b></h5>
+          <p><%= listing.venueDescription %></p>
+        </div>
+        <div class="venueDetail">
+          <h5><b>Rate per Hour</b></h5>
+          <p> ₹ <%= listing.eventRate.toLocaleString("en-IN") %></p>
+        </div>
+        <div class="venueDetail">
+          <h5><b>Capacity</b></h5>
+          <p><%= listing.capacity %></p>
+        </div>
+        <div class="venueDetail">
+          <h5><b>Venue type</b></h5>
+          <p><%= listing.venueType %></p>
+        </div>
+        <div class="venueDetail">
+          <h5><b>Location</b></h5>
+          <p><%= listing.location %></p>
+        </div>
+        <div class="venueDetail">
+          <h5><b>Country</b></h5>
+          <p><%= listing.country %></p>
+        </div>
       </p>
     </div>
   </div>
@@ -34,14 +54,14 @@
   <div class="btns mb-3">
     <a
       href="/listings/<%= listing._id%>/edit"
-      class="btn btn-dark col-1 offset-3 edit-btn"
+      class="btn col-1 offset-3 edit-btn"
       >Edit</a
     >
     <form method="GET" action="/listings">
-      <button class="btn btn-dark offset-4">Home</button>
+      <button class="btn offset-4 home-btn">Home</button>
     </form>
     <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE">
-      <button class="btn btn-dark offset-5">Delete</button>
+      <button class="btn btn-danger offset-5">Delete</button>
     </form>
   </div>
   <% } %>
@@ -120,7 +140,7 @@
           Please submit some comments for review
         </div>
       </div>
-      <button class="btn btn-outline-dark">Submit</button>
+      <button class="btn btn-outline-dark submit-btn">Submit</button>
     </form>
 
     <% } %>
@@ -144,7 +164,7 @@
             method="POST"
             action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE"
           >
-            <button class="btn btn-sm btn-dark">Delete</button>
+            <button class="btn btn-sm btn-danger">Delete</button>
           </form>
         </div>
       </div>
