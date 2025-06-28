@@ -128,7 +128,7 @@ Ensure you have the following:
    node app.js       # or nodemon app.js (with nodemon)
    ```
 
-Visit: `http://localhost:3000`
+Visit: `http://localhost:8080`
 
 ---
 
