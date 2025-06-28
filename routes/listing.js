@@ -22,6 +22,10 @@ router
 //Search Route
 router.get("/search", listingController.search);
 
+
+//Filter Route
+router.get("/venue-filter", listingController.filterVenue);
+
 // New Route
 router.get("/new", isLoggedIn, listingController.renderNewForm);
 

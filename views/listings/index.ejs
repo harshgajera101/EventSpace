@@ -1,119 +1,120 @@
 <% layout("/layouts/boilerplate") %>
-<body>
-  <style>
-    #filters {
-      display: flex;
-      flex-direction: wrap;
-      user-select: none;
-      align-items: center;
-      justify-content: space-between;
-    }
 
-    .filter {
-      text-align: center;
-      margin-top: 2rem;
-      margin-right: 2rem;
-      opacity: 0.7;
-    }
+  <body>
+    <style>
+      #filters {
+        display: flex;
+        flex-direction: wrap;
+        user-select: none;
+        align-items: center;
+        justify-content: space-between;
+      }
 
-    .filter p {
-      font-size: 0.8rem;
-    }
+      .filter {
+        text-align: center;
+        margin-top: 2rem;
+        margin-right: 2rem;
+        opacity: 0.7;
+      }
 
-    .filter:hover {
-      opacity: 1;
-      color: #1e1e2f;
-      cursor: pointer;
-    }
+      .filter p {
+        font-size: 0.8rem;
+      }
 
-    input[type="checkbox"]:checked {
-      background-color: #7fabdc;
-    }
+      .filter:hover {
+        opacity: 1;
+        color: #1e1e2f;
+        cursor: pointer;
+      }
 
-    .tax-info {
-      display: none;
-    }
+      input[type="checkbox"]:checked {
+        background-color: #7fabdc;
+      }
 
-    .tax-toggle {
-      /* border: 1px solid grey; */
-      border-radius: 1rem;
-      padding: 1rem;
-      height: fit-content;
-      display: flex;
-      align-items: center;
-      color: #b8cde5;
-      background-color: #1e1e2f;
-      font-weight: bold;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    }
+      .tax-info {
+        display: none;
+      }
 
-    .form-check-label {
-      margin-left: 0.8rem;
-    }
+      .tax-toggle {
+        /* border: 1px solid grey; */
+        border-radius: 1rem;
+        padding: 1rem;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        color: #b8cde5;
+        background-color: #1e1e2f;
+        font-weight: bold;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
 
-    #card-img {
-      height: 20rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      margin-bottom: 0.3rem;
-    }
-  </style>
+      .form-check-label {
+        margin-left: 0.8rem;
+      }
 
-  <div id="filters">
-    <div class="filter">
-      <div>
-        <i class="fa-solid fa-fire"></i>
+      #card-img {
+        height: 20rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        margin-bottom: 0.3rem;
+      }
+    </style>
+
+    <div id="filters">
+      <div class="filter" data-venue-type="">
+        <div>
+          <i class="fa-solid fa-fire"></i>
+        </div>
+        <p>Trending</p>
       </div>
-      <p>Trending</p>
-    </div>
-    <div class="filter">
-      <div>
-        <i class="fa-solid fa-star"></i>
+      <div class="filter" data-venue-type="">
+        <div>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p>Top Rated</p>
       </div>
-      <p>Top Rated</p>
-    </div>
-    <div class="filter">
-      <div>
-        <i class="fa-solid fa-umbrella-beach"></i>
+      <div class="filter" data-venue-type="Beachside Venues">
+        <div>
+          <i class="fa-solid fa-umbrella-beach"></i>
+        </div>
+        <p>Beaches</p>
       </div>
-      <p>Beaches</p>
-    </div>
-    <div class="filter">
-      <div>
-        <i class="fa-solid fa-utensils"></i>
+      <div class="filter" data-venue-type="Banquet Halls">
+        <div>
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+        <p>Banquet Halls</p>
       </div>
-      <p>Banquet Halls</p>
-    </div>
-    <div class="filter">
-      <div>
-        <i class="fa-solid fa-landmark-dome"></i>
+      <div class="filter" data-venue-type="Heritage Properties">
+        <div>
+          <i class="fa-solid fa-landmark-dome"></i>
+        </div>
+        <p>Heritage</p>
       </div>
-      <p>Heritage</p>
-    </div>
-    <div class="filter">
-      <div>
-        <i class="fa-solid fa-city"></i>
+      <div class="filter" data-venue-type="Rooftop Venues">
+        <div>
+          <i class="fa-solid fa-city"></i>
+        </div>
+        <p>Rooftops</p>
       </div>
-      <p>Rooftops</p>
-    </div>
-    <div class="filter">
-      <div>
-        <i class="fa-solid fa-bed"></i>
+      <div class="filter" data-venue-type="Hotels & Resorts">
+        <div>
+          <i class="fa-solid fa-bed"></i>
+        </div>
+        <p>Hotels</p>
       </div>
-      <p>Hotels</p>
-    </div>
-    <div class="filter">
-      <div>
-        <i class="fa-solid fa-leaf"></i>
+      <div class="filter" data-venue-type="Open Lawns / Gardens">
+        <div>
+          <i class="fa-solid fa-leaf"></i>
+        </div>
+        <p>Gardens</p>
       </div>
-      <p>Gardens</p>
-    </div>
-    <div class="filter">
-      <div>
-        <i class="fa-solid fa-masks-theater"></i>
+      <div class="filter" data-venue-type="Auditoriums">
+        <div>
+          <i class="fa-solid fa-masks-theater"></i>
+        </div>
+        <p>Auditoriums</p>
       </div>
-      <p>Auditoriums</p>
-    </div>
-    <!-- <div class="filter">
+      <!-- <div class="filter">
       <div>
         <i class="fa-solid fa-person-snowboarding"></i>
       </div>
@@ -126,80 +127,121 @@
       <p>Camping</p>
     </div> -->
 
-    <div class="tax-toggle">
-      <div class="form-check form-switch">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          role="switch"
-          id="switchCheckDefault"
-        />
-        <label class="form-check-label" for="switchCheckDefault"
-          >Display Total after Taxes</label
-        >
-      </div>
-    </div>
-  </div>
-
-  <!-- <% if (allListings.length === 0) { %>
-  <h4 class="text-center mt-5">No results found for your search.</h4>
-  <% } %> -->
-
-  <div
-    id="listingContainer"
-    class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-4 mt-3"
-  >
-    <% for(let listing of allListings) { %>
-    <a href="/listings/<%= listing._id %>" class="listing-link">
-      <div class="listing-card card col">
-        <img
-          id="card-img"
-          src="<%= listing.image.url %>"
-          class="card-img-top"
-          alt="listings-image"
-        />
-        <div class="card-img-overlay"></div>
-        <div class="card-body">
-          <p class="card-text">
-            <b><%= listing.venueName%></b> <br />
-            ₹ <%= listing.eventRate.toLocaleString("en-IN") %> / per Hour
-            <i class="tax-info"
-              >&nbsp;+ 18% GST = ₹<%= (listing.eventRate + listing.eventRate *
-              0.18).toLocaleString("en-IN") %></i
-            >
-          </p>
+      <div class="tax-toggle">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault" />
+          <label class="form-check-label" for="switchCheckDefault">Display Total after Taxes</label>
         </div>
       </div>
-    </a>
-    <% } %>
-  </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const searchInput = document.querySelector(".search-inp");
-      const listingContainer = document.querySelector("#listingContainer");
+    </div>
 
-      searchInput.addEventListener("input", async (e) => {
-        const query = e.target.value.trim();
+    <div id="listingContainer" class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-4 mt-3">
+      <% for(let listing of allListings) { %>
+        <a href="/listings/<%= listing._id %>" class="listing-link">
+          <div class="listing-card card col">
+            <img id="card-img" src="<%= listing.image.url %>" class="card-img-top" alt="listings-image" />
+            <div class="card-img-overlay"></div>
+            <div class="card-body">
+              <p class="card-text">
+                <b>
+                  <%= listing.venueName%>
+                </b> <br />
+                ₹ <%= listing.eventRate.toLocaleString("en-IN") %> / per Hour
+                  <i class="tax-info">&nbsp;+ 18% GST = ₹<%= (listing.eventRate + listing.eventRate *
+                      0.18).toLocaleString("en-IN") %></i>
+              </p>
+            </div>
+          </div>
+        </a>
+        <% } %>
+    </div>
+    
+    <script>
 
-        try {
-          const res = await fetch(`/listings/search?q=${query}`);
-          const listings = await res.json();
+      //Filter Listing
+      document.addEventListener("DOMContentLoaded", function () {
+        const listingContainer = document.getElementById("listingContainer");
+        const filters = document.querySelectorAll("#filters .filter");
 
-          listingContainer.innerHTML = "";
+        if (!listingContainer || !filters.length) {
+          console.error("Missing listing container or filters!");
+          return;
+        }
 
-          if (listings.length === 0) {
-            listingContainer.innerHTML =
-              '<h4 class="text-center mt-5">No results found.</h4>';
-            return;
+        // Fetch and display filtered listings
+        async function fetchFilteredListings(venueType = "") {
+          console.log("Fetching for venue type:", venueType);
+
+          try {
+            const url = `/listings/venue-filter${venueType ? `?venueType=${encodeURIComponent(venueType)}` : ''}`;
+            const response = await fetch(url);
+
+            if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+
+            const listings = await response.json();
+
+            listingContainer.innerHTML = listings.length === 0
+              ? '<h4 class="text-center mt-5">No venues found for this type.</h4>'
+              : listings.map(listing => `
+            <a href="/listings/${listing._id}" class="listing-link">
+              <div class="listing-card card col">
+                <img style="height: 20rem" src="${listing.image?.url || '/fallback.jpg'}" id="card-img" class="card-img-top" alt="listings-image" />
+                <div class="card-img-overlay"></div>
+                <div class="card-body">
+                  <p class="card-text">
+                    <b>${listing.venueName}</b><br />
+                    ₹ ${listing.eventRate?.toLocaleString("en-IN") || 'N/A'} / per Hour
+                    <i class="tax-info">+ 18% GST = ₹${((listing.eventRate || 0) * 1.18).toLocaleString("en-IN")}</i>
+                  </p>
+                </div>
+              </div>
+            </a>
+          `).join('');
+          } catch (error) {
+            listingContainer.innerHTML = '<h4 class="text-center mt-5">Error loading venues. Please try again.</h4>';
           }
+        }
 
-          listings.forEach((listing) => {
-            const html = `
+        // Add click listeners to filters
+        filters.forEach(filter => {
+          filter.addEventListener("click", function (e) {
+            e.preventDefault();
+            filters.forEach(f => f.classList.remove("active"));
+            this.classList.add("active");
+            fetchFilteredListings(this.getAttribute("data-venue-type") || "");
+          });
+        });
+      });
+
+
+      //Search Listing
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.querySelector(".search-inp");
+        const listingContainer = document.querySelector("#listingContainer");
+
+        searchInput.addEventListener("input", async (e) => {
+          const query = e.target.value.trim();
+
+          try {
+            const res = await fetch(`/listings/search?q=${query}`);
+            const listings = await res.json();
+
+            listingContainer.innerHTML = "";
+
+            if (listings.length === 0) {
+              listingContainer.innerHTML =
+                '<h4 class="text-center mt-5">No results found.</h4>';
+              return;
+            }
+
+            listings.forEach((listing) => {
+              const html = `
           <a href="/listings/${listing._id}" class="listing-link">
             <div class="listing-card card col">
               <img
                 style="height: 20rem"
                 src="${listing.image?.url || "/fallback.jpg"}"
+                id="card-img"
                 class="card-img-top"
                 alt="listings-image"
               />
@@ -209,27 +251,27 @@
                   <b>${listing.venueName}</b><br />
                   ₹ ${listing.eventRate.toLocaleString("en-IN")} / per Hour
                   <i class="tax-info">+ 18% GST = ₹${(
-                    listing.eventRate * 1.18
-                  ).toLocaleString("en-IN")}</i>
+                  listing.eventRate * 1.18
+                ).toLocaleString("en-IN")}</i>
                 </p>
               </div>
             </div>
           </a>
         `;
-            listingContainer.innerHTML += html;
-          });
-        } catch (err) {
-          console.error("Live search failed:", err);
-        }
+              listingContainer.innerHTML += html;
+            });
+          } catch (err) {
+            console.error("Live search failed:", err);
+          }
+        });
       });
-    });
 
-    let debounceTimer;
-    searchInput.addEventListener("input", () => {
-      clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(() => {
-        // call fetch logic here
-      }, 300); // 300ms delay
-    });
-  </script>
-</body>
+      let debounceTimer;
+      searchInput.addEventListener("input", () => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          // call fetch logic here
+        }, 300); // 300ms delay
+      });
+    </script>
+  </body>

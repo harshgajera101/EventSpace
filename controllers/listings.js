@@ -33,6 +33,31 @@ module.exports.search = async (req, res) => {
   res.json(results);
 };
 
+module.exports.filterVenue = async (req, res) => {
+  try {
+    const { venueType } = req.query;
+    let query = {};
+
+    if (venueType && venueType.trim() !== "") {
+      query.venueType = venueType;
+    }
+
+    // Replace 'Listing' with your actual model name
+    const listings = await Listing.find(query)
+      .sort({ createdAt: -1 })
+      .limit(100);
+
+    res.json(listings);
+
+  } catch (error) {
+    console.error("Filter error:", error);
+    res.status(500).json({
+      error: "Server error",
+      message: error.message
+    });
+  }
+};
+
 module.exports.renderNewForm = (req, res) => {
   res.render("listings/new.ejs");
 };
