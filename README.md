@@ -81,6 +81,33 @@ A comprehensive full-stack web application for event venue booking, connecting v
 
 ---
 
+
+## 📱 Application Screenshots
+
+### 🔐 User Registration/Login
+<img width="1470" height="796" alt="Screenshot 2025-07-17 at 6 14 01 PM" src="https://github.com/user-attachments/assets/11fce777-fe3b-4195-a190-de1eb117fdf4" />
+
+### 🏠 Homepage
+<img width="1470" height="797" alt="Screenshot 2025-07-17 at 6 14 43 PM" src="https://github.com/user-attachments/assets/b13d54cd-d903-463e-817b-e92f49f5ebd5" />
+
+### 🧮 Homepage filters
+<img width="1470" height="797" alt="Screenshot 2025-07-17 at 6 15 27 PM" src="https://github.com/user-attachments/assets/c4423ff9-7a51-4c18-b6b3-ca42acb04675" />
+
+### 🔍 Homepage Search
+<img width="1470" height="796" alt="Screenshot 2025-07-17 at 6 16 48 PM" src="https://github.com/user-attachments/assets/59725f0b-0805-41d7-9d4a-3bd3f5b2d124" />
+
+### ➕  Add Your Venue
+<img width="1470" height="795" alt="Screenshot 2025-07-17 at 6 18 23 PM" src="https://github.com/user-attachments/assets/f856b180-5c64-47e2-a827-5d6d70e6f9c9" />
+
+### 🏨 Venue Details
+![ScreenRecording2025-07-19at4 27 06PM-ezgif com-resize](https://github.com/user-attachments/assets/87ff746b-c5af-4090-a428-6163e23fc159)
+
+### ✏️  Edit Venue
+<img width="1470" height="796" alt="Screenshot 2025-07-17 at 6 28 09 PM" src="https://github.com/user-attachments/assets/fe1f2383-643f-43f8-b46d-75a20a1d8b05" />
+
+
+---
+
 ## 🛠️ Getting Started
 
 ### 📋 Prerequisites
